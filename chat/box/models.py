@@ -8,5 +8,6 @@ class Box(models.Model):
     owner = models.ForeignKey(Chatter, on_delete=models.PROTECT, related_name='box_owner')
     room = models.ForeignKey(Room, on_delete=models.PROTECT, related_name='box_room')
     chatter = models.ManyToManyField(Chatter, blank=True)
+    unread_messages = models.JSONField(blank=True, default=dict)
     is_active = models.BooleanField(default=True)
 
