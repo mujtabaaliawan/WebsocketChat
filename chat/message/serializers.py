@@ -17,12 +17,3 @@ class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
         fields = '__all__'
-
-    # def validate(self, data):
-    #     box = data['box']
-    #     request = self.context['request']
-    #     sender_user_id = request.user.id
-    #     sender_id = Chatter.objects.get(user_id=sender_user_id).id
-    #     if box.chatter.filter(id=sender_id).exists():
-    #         return data
-    #     raise serializers.ValidationError("Sender is not added in the box")
