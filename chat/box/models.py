@@ -10,4 +10,5 @@ class Box(models.Model):
     chatter = models.ManyToManyField(Chatter, blank=True)
     unread_messages = models.JSONField(blank=True, default=dict)
     is_active = models.BooleanField(default=True)
+    box_detail = models.JSONField(blank=True, default=dict)
 
