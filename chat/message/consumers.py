@@ -8,7 +8,6 @@ from message.serializers import MessageSerializer
 from chatter.models import Chatter
 from box.serializers import BoxSerializer
 import datetime
-import time
 
 
 class ChatConsumer(WebsocketConsumer):
